@@ -2,28 +2,29 @@
   "title": "My Amsterdam",
   "subtitle": "A personal guide to neighbourhoods, sights and food",
   "city": "Amsterdam",
-  "map": { "center": [52.372, 4.893], "zoom": 13 },
-
+  "map": {
+    "center": [52.372, 4.893],
+    "zoom": 13
+  },
   "types": {
     "neighbourhood": { "label": "Neighbourhood", "color": "#4C6EF5" },
-    "landmark":      { "label": "Landmark",      "color": "#E8590C" },
-    "museum":        { "label": "Museum",        "color": "#7B3FE4" },
-    "food":          { "label": "Food & drink",  "color": "#D9A400" },
-    "attraction":    { "label": "Attraction",    "color": "#1C7ED6" },
-    "street":        { "label": "Street & square", "color": "#E64980" },
-    "park":          { "label": "Park",          "color": "#2B9348" },
-    "market":        { "label": "Market",        "color": "#0B9DA8" },
-    "culture":       { "label": "Culture & venue", "color": "#9C6644" }
+    "landmark": { "label": "Landmark", "color": "#E8590C" },
+    "museum": { "label": "Museum", "color": "#7B3FE4" },
+    "food": { "label": "Food & drink", "color": "#D9A400" },
+    "attraction": { "label": "Attraction", "color": "#1C7ED6" },
+    "street": { "label": "Street & square", "color": "#E64980" },
+    "park": { "label": "Park", "color": "#2B9348" },
+    "market": { "label": "Market", "color": "#0B9DA8" },
+    "culture": { "label": "Culture & venue", "color": "#9C6644" }
   },
-
   "districts": [
     {
       "id": "inside-the-singel",
       "name": "Inside the Singel canal",
       "description": "The busiest place in the city and super touristic, could be too crowded and annoying, I personally do not like to walk around but if you are first time there are must see places",
+      "tags": ["touristy", "history", "must-see"],
       "area": "inside-the-singel",
       "color": "#F76707",
-      "tags": ["touristy", "history", "must-see"],
       "places": [
         {
           "id": "centraal-station",
@@ -135,14 +136,6 @@
               "tags": ["sandwiches"],
               "location": [52.369095, 4.891386],
               "mapsQuery": "Broodje Popov, Spui 8, Amsterdam"
-            },
-            {
-              "id": "blin-queen",
-              "name": "Blin queen",
-              "description": "A place opened fellow Belarusians, not very Dutch but they make the best Blini in Amsterdam :) ",
-              "type": "food",
-              "tags": ["my favourite"],
-              "location": [52.366956, 4.896856]
             }
           ]
         },
@@ -228,9 +221,9 @@
       "id": "canal-ring",
       "name": "Herengracht, Keizersgracht, Prinsengracht",
       "description": "If I want to walk in center of Amsterdam, that's where I go",
+      "tags": ["walks", "my favourite"],
       "area": "canal-ring",
       "color": "#1C7ED6",
-      "tags": ["walks", "my favourite"],
       "places": [
         {
           "id": "westerkerk",
@@ -286,6 +279,14 @@
           "type": "landmark",
           "tags": ["views", "architecture"],
           "location": [52.363584, 4.902375]
+        },
+        {
+          "id": "blin-queen",
+          "name": "Blin queen",
+          "description": "A place opened fellow Belarusians, not very Dutch but they make the best Blini in Amsterdam :)",
+          "type": "food",
+          "tags": ["my favourite"],
+          "location": [52.366956, 4.896856]
         }
       ]
     },
@@ -293,9 +294,9 @@
       "id": "museum-quarter",
       "name": "Museumkwartier, Willemspark, Vondelpark",
       "description": "The area with the most famous museums in Amsterdam, and a just a beautiful area to walk around",
+      "tags": ["art", "walks"],
       "area": "museum-quarter",
       "color": "#AE3EC9",
-      "tags": ["art", "walks"],
       "places": [
         {
           "id": "rijksmuseum",
@@ -328,6 +329,28 @@
           "type": "park",
           "tags": ["free", "walks", "coffee"],
           "area": "vondelpark"
+        },
+        {
+          "id": "tozi",
+          "name": "Tozi",
+          "description": "Italian restaurant. We love it a lot",
+          "type": "food",
+          "tags": ["dinner", "pasta"],
+          "location": [52.354266, 4.866481]
+        },
+        {
+          "id": "lomanstraat",
+          "name": "Lomanstraat",
+          "description": "A very popular street for its beautiful trees",
+          "type": "landmark",
+          "area": "lomanstraat"
+        },
+        {
+          "id": "carter",
+          "name": "Carter",
+          "description": "It is gastrobar. I love it for the food, but many people come for drinks, so it can be busy in the evening",
+          "type": "food",
+          "location": [52.35416, 4.869219]
         }
       ]
     },
@@ -335,14 +358,14 @@
       "id": "de-pijp",
       "name": "De Pijp",
       "description": "A neighborhood known for its diverse culture, trendy cafes, and the famous Albert Cuyp Market",
+      "tags": ["local food", "coffee"],
       "area": "de-pijp",
       "color": "#E64980",
-      "tags": ["local food", "coffee"],
       "places": [
         {
           "id": "albert-cuyp-market",
           "name": "Albert Cuyp Market",
-          "description": "A market street. Good place to buy souvenirs and try local food. Here you can have a fresh stroopwafel, a haring sandwich, poffertjes and other :) ",
+          "description": "A market street. Good place to buy souvenirs and try local food. Here you can have a fresh stroopwafel, a haring sandwich, poffertjes and other :)",
           "type": "market",
           "tags": ["local food", "sweet tooth", "shopping"],
           "area": "albert-cuyp-market"
@@ -353,17 +376,17 @@
       "id": "jordaan",
       "name": "Jordaan",
       "description": "Cute neighborhood area very, it used to be the place were workers used to live, but now as usual it is a popular area for expats and hight income specialists. Very cute and small area, with a lot of restaurants and bars, and a lot of shops. It is very cute place to walk around",
+      "tags": ["walks", "shopping", "coffee"],
       "area": "jordaan",
-      "color": "#2F9E44",
-      "tags": ["walks", "shopping", "coffee"]
+      "color": "#2F9E44"
     },
     {
       "id": "noord",
       "name": "Noord",
       "description": "The area that is across the river IJ, it is a bit more industrial and less touristic, but it has a lot of interesting places to see. You can take a free ferry from Centraal Station to get there",
+      "tags": ["ferry", "art", "views"],
       "area": "noord",
       "color": "#0C8599",
-      "tags": ["ferry", "art", "views"],
       "places": [
         {
           "id": "ndsm-wharf",
