@@ -413,6 +413,45 @@
           "location": [52.384335, 4.900812]
         }
       ]
+    },
+    {
+      "id": "plantagebuurt",
+      "name": "Plantagebuurt",
+      "description": "The district with the Botanic Garden and Artis",
+      "area": "plantagebuurt",
+      "color": "#F59F00",
+      "places": [
+        {
+          "id": "artis",
+          "name": "Artis",
+          "description": "The zoo park was founded in the 19th century. I am not a fan of zoos, but people like them",
+          "type": "park",
+          "area": "artis"
+        },
+        {
+          "id": "hortus-botanicus",
+          "name": "Hortus Botanicus",
+          "description": "Nice old botanical garden with plants, butterflies and more :)",
+          "type": "park",
+          "area": "hortus-botanicus"
+        },
+        {
+          "id": "micropia",
+          "name": "Micropia",
+          "description": "The museum about  microbes",
+          "type": "museum",
+          "tags": ["not visited yet"],
+          "location": [52.366891, 4.912689]
+        },
+        {
+          "id": "artis-aquarium",
+          "name": "ARTIS aquarium",
+          "description": "Recently opened after renovation. I've heard some good feedbacks",
+          "type": "landmark",
+          "tags": ["not visited yet"],
+          "location": [52.364529, 4.917805]
+        }
+      ]
     }
   ]
 }
