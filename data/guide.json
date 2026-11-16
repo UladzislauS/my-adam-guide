@@ -19,7 +19,7 @@
   "districts": [
     {
       "id": "inside-the-singel",
-      "name": "Inside the Single canal",
+      "name": "Inside the Singel canal",
       "description": "The busiest place in the city and super touristic, could be too crowded and annoying, I personally do not like to walk around but if you are first time there are must see places",
       "area": "inside-the-singel",
       "color": "#F76707",
@@ -36,7 +36,7 @@
             {
               "id": "station-building",
               "name": "The station building",
-              "description": "The station building is a beautiful example of 19th-century architecture itest",
+              "description": "The station building is a beautiful example of 19th-century architecture",
               "type": "landmark",
               "tags": ["architecture", "history"]
             },
@@ -114,7 +114,7 @@
             {
               "id": "fulu-mandarijn",
               "name": "Fulu Mandarijn",
-              "description": "My favorite Chineese restaurant in Amsterdam. Not very touristic, and the food is really good. But I recommend to ask staff for recommendations, it can be too spicy sometimes",
+              "description": "My favorite Chinese restaurant in Amsterdam. Not very touristic, and the food is really good. But I recommend to ask staff for recommendations, it can be too spicy sometimes",
               "type": "food",
               "tags": ["my favourite", "chinese"],
               "location": [52.371688, 4.892619]
@@ -191,7 +191,7 @@
         {
           "id": "oba-oosterdok",
           "name": "OBA Oosterdok library",
-          "description": "The public library. It is free to enter and has a cafee on the top floor with a great view of the city",
+          "description": "The public library. It is free to enter and has a cafe on the top floor with a great view of the city",
           "type": "culture",
           "tags": ["free", "views", "coffee"],
           "location": [52.376246, 4.908198]
@@ -351,7 +351,7 @@
     },
     {
       "id": "jordaan",
-      "name": "Jordan",
+      "name": "Jordaan",
       "description": "Cute neighborhood area very, it used to be the place were workers used to live, but now as usual it is a popular area for expats and hight income specialists. Very cute and small area, with a lot of restaurants and bars, and a lot of shops. It is very cute place to walk around",
       "area": "jordaan",
       "color": "#2F9E44",
@@ -359,7 +359,7 @@
     },
     {
       "id": "noord",
-      "name": "Nord",
+      "name": "Noord",
       "description": "The area that is across the river IJ, it is a bit more industrial and less touristic, but it has a lot of interesting places to see. You can take a free ferry from Centraal Station to get there",
       "area": "noord",
       "color": "#0C8599",
