@@ -79,14 +79,14 @@
   L.control.zoom({ position: "topright" }).addTo(map);
   window.cityGuide = { map }; // handy for debugging in the browser console
 
-  const dark = window.matchMedia("(prefers-color-scheme: dark)");
-  const styleUrl = () => `https://tiles.openfreemap.org/styles/${dark.matches ? "dark" : "positron"}`;
+  const styleUrl = () => `https://tiles.openfreemap.org/styles/${window.cityTheme?.isDark() ? "dark" : "positron"}`;
   const base = L.maplibreGL({
     style: styleUrl(),
     attribution:
       '<a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
   }).addTo(map);
-  dark.addEventListener?.("change", () => base.getMaplibreMap().setStyle(styleUrl()));
+  window.addEventListener("themechange", () => base.getMaplibreMap().setStyle(styleUrl()));
+  document.getElementById("theme").addEventListener("click", () => window.cityTheme?.toggle());
 
   // Panes keep districts at the bottom, then areas, streets, and dots on top.
   [["districts", 350], ["areas", 400], ["lines", 420], ["points", 450]].forEach(([name, z]) => {

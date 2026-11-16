@@ -21,28 +21,26 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141416;
-    --panel: #1b1b1e;
-    --ink: #ececee;
-    --ink-2: #b4b5ba;
-    --ink-3: #7f8086;
-    --line: #2c2c31;
-    --chip: #26262b;
-    --chip-hover: #303036;
-    --field: #141416;
-    --accent: #ff8a3d;
-    --accent-ink: #1b1b1e;
-    --sel: #2b2119;
-    --error: #ff8787;
-    --error-bg: #2c1a1a;
-    --warn: #ffd43b;
-    --warn-bg: #2b2614;
-    --ok: #69db7c;
-    --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
-    color-scheme: dark;
-  }
+:root[data-theme="dark"] {
+  --bg: #141416;
+  --panel: #1b1b1e;
+  --ink: #ececee;
+  --ink-2: #b4b5ba;
+  --ink-3: #7f8086;
+  --line: #2c2c31;
+  --chip: #26262b;
+  --chip-hover: #303036;
+  --field: #141416;
+  --accent: #ff8a3d;
+  --accent-ink: #1b1b1e;
+  --sel: #2b2119;
+  --error: #ff8787;
+  --error-bg: #2c1a1a;
+  --warn: #ffd43b;
+  --warn-bg: #2b2614;
+  --ok: #69db7c;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -85,6 +83,8 @@ a { color: var(--accent); }
 }
 .icon-btn:hover { background: var(--chip); }
 .icon-btn svg { width: 22px; height: 22px; fill: currentColor; }
+.theme-btn .sun, :root[data-theme="dark"] .theme-btn .moon { display: none; }
+:root[data-theme="dark"] .theme-btn .sun { display: block; }
 
 /* ---------- Layout ---------- */
 .shell { display: flex; flex-direction: column; height: 100dvh; }

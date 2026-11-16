@@ -12,22 +12,22 @@
   --shadow: 0 8px 28px rgba(20, 20, 30, 0.14);
   --radius: 12px;
   --panel-w: 410px;
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #141416;
-    --panel: #1b1b1e;
-    --ink: #ececee;
-    --ink-2: #b4b5ba;
-    --ink-3: #7f8086;
-    --line: #2c2c31;
-    --chip: #26262b;
-    --chip-hover: #303036;
-    --accent: #ff8a3d;
-    --sel: #2b2119;
-    --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
-  }
+:root[data-theme="dark"] {
+  --bg: #141416;
+  --panel: #1b1b1e;
+  --ink: #ececee;
+  --ink-2: #b4b5ba;
+  --ink-3: #7f8086;
+  --line: #2c2c31;
+  --chip: #26262b;
+  --chip-hover: #303036;
+  --accent: #ff8a3d;
+  --sel: #2b2119;
+  --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -295,11 +295,9 @@ select {
 .group-head { display: flex; align-items: center; gap: 8px; }
 .group-head .swatch { width: 10px; height: 10px; border-radius: 3px; flex: none; }
 
-@media (prefers-color-scheme: dark) {
-  .leaflet-bar a { background: var(--panel); color: var(--ink); border-color: var(--line); }
-  .leaflet-control-attribution { background: rgba(27, 27, 30, 0.8) !important; color: var(--ink-3); }
-  .leaflet-control-attribution a { color: var(--ink-2); }
-}
+:root[data-theme="dark"] .leaflet-bar a { background: var(--panel); color: var(--ink); border-color: var(--line); }
+:root[data-theme="dark"] .leaflet-control-attribution { background: rgba(27, 27, 30, 0.8) !important; color: var(--ink-3); }
+:root[data-theme="dark"] .leaflet-control-attribution a { color: var(--ink-2); }
 
 /* ---------- Map overlay buttons ---------- */
 .map-wrap { position: relative; min-height: 0; }
@@ -345,6 +343,11 @@ select {
 .round-btn.busy svg { animation: pulse 1s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: 0.3; } }
 
+/* Day / night switch: shows the moon by day and the sun at night. */
+.round-btn.theme-btn { top: 126px; }
+.theme-btn .sun, :root[data-theme="dark"] .theme-btn .moon { display: none; }
+:root[data-theme="dark"] .theme-btn .sun { display: block; }
+
 .grabber, #count-mobile, .detail { display: none; }
 
 /* ---------- Phones: full-screen map + draggable bottom sheet ---------- */
@@ -368,6 +371,7 @@ select {
     box-shadow: var(--shadow);
   }
   .round-btn svg { width: 22px; height: 22px; }
+  .round-btn.theme-btn { top: calc(env(safe-area-inset-top) + 66px); }
 
   /* The catalogue becomes a bottom sheet; JS sets its translateY to peek / half / full. */
   .panel {

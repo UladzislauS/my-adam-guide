@@ -5,6 +5,8 @@
 
   /* ---------- Helpers ---------- */
   const $ = (s, el = document) => el.querySelector(s);
+  // Works from the first moment, even if the guide fails to load.
+  $("#theme").addEventListener("click", () => window.cityTheme?.toggle());
   const esc = (s) =>
     String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
   const slug = (s) =>
@@ -426,14 +428,13 @@
   /* ---------- Map ---------- */
   const home = { center: guide.map?.center || [52.372, 4.893], zoom: guide.map?.zoom || 13 };
   const map = L.map("map", { zoomControl: true }).setView(home.center, home.zoom);
-  const dark = matchMedia("(prefers-color-scheme: dark)");
-  const styleUrl = () => `https://tiles.openfreemap.org/styles/${dark.matches ? "dark" : "positron"}`;
+  const styleUrl = () => `https://tiles.openfreemap.org/styles/${window.cityTheme?.isDark() ? "dark" : "positron"}`;
   const basemap = L.maplibreGL({
     style: styleUrl(),
     attribution:
       '<a href="https://openfreemap.org" target="_blank">OpenFreeMap</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
   }).addTo(map);
-  dark.addEventListener?.("change", () => { basemap.getMaplibreMap().setStyle(styleUrl()); drawMap(); });
+  window.addEventListener("themechange", () => { basemap.getMaplibreMap().setStyle(styleUrl()); drawMap(); });
   [["districts", 350], ["areas", 400], ["lines", 420], ["points", 450], ["sel", 460], ["preview", 470]].forEach(([n, z]) => {
     map.createPane(n).style.zIndex = z;
   });
