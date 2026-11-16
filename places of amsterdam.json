@@ -1,0 +1,199 @@
+{
+  "districts": [
+    {
+      "name": "Inside the Single canal",
+      "description": "The busiest place in the city and super touristic, could be too crowded and annoying, I personally do not like to walk around but if you are first time there are must see places",
+      "places": [
+        {
+          "name": "Centraal Station",
+          "description": "The main train station in Amsterdam, and a major transportation hub for the city, it might be overwhelming but it worth spend a few minutes there",
+          "places_to_see": [
+            {
+              "name": "The station building",
+              "description": "The station building is a beautiful example of 19th-century architecture itest"
+            },
+            {
+              "name": "Starbucks in old waiting room",
+              "description": "Hidden gem of station, they preserved the design of the original waiting room. Unfortunately 1st class Grand Cafe is closed :("
+            },
+            {
+              "name": "IJ entrance",
+              "description": "The entrance to the station from the IJ river, with a great view of the city and the river. You can also take a ferry from here to other parts of the city, including the popular NDSM wharf area"
+            }
+          ]
+        },
+        {
+          "name": "Dam Square",
+          "description": "The heart of Amsterdam. This is the place where the city started",
+          "places_to_see": [
+            {
+              "name": "Royal Palace",
+              "description": "The official residence of the Dutch monarch"
+            },
+            {
+              "name": "National Monument",
+              "description": "A World War II memorial"
+            },
+            {
+              "name": "New Church",
+              "description": "(Not that new :) it is founded in the 15th century) A historic church that hosts exhibitions and concerts"
+            }
+          ]
+        },
+        {
+          "name": "Rokin",
+          "description": "A street in the city center, with a lot of shops and restaurants also a nice metro station when you can see layers of amsterdam history when you go down to the metro station",
+          "food_options": [
+            {
+              "name": "The Seafood Bar",
+              "description": "A restaurant that specializes in seafood dishes. If you like seafood, this is a great place to try some local dishes"
+            },
+            {
+              "name": "Fulu Mandarijn",
+              "description": "My favorite Chineese restaurant in Amsterdam. Not very touristic, and the food is really good. But I recommend to ask staff for recommendations, it can be too spicy sometimes"
+            },
+            {
+              "name": "Van Stapele Koekmakerij",
+              "description": "A bakery that specializes in chocolate cookies. They are iconic in Amsterdam, one of the touristic things that I love myself. It is a must-try for anyone with a sweet tooth"
+            },
+            {
+              "name": "Broodje Popov",
+              "description": "They make the best Philly Cheesesteak in Amsterdam"
+            },
+            {
+              "name": "Blin queen",
+              "description": "A place opened fellow Belarusians, not very Dutch but they make the best Blini in Amsterdam :) "
+            }
+          ]
+        },
+        {
+          "name": "Begijnhof",
+          "description": "The quiet, historic enclosed courtyard in the heart of Amsterdam with historic houses and churches"
+        },
+        {
+          "name": "De Wallen with red light district",
+          "description": "The most famous area in Amsterdam, known for its legalized prostitution and nightlife... Most people know Amsterdam by its streets, but trust me it is not real Amsterdam experience :)",
+          "places_to_see": [
+            {
+              "name": "Oude Kerk",
+              "description": "The oldest building in Amsterdam, dating back to the 13th century"
+            },
+            {
+              "name": "Red Light Secrets Museum",
+              "description": "A museum that offers a glimpse into the world of sex work in Amsterdam. I didn't visit it tbh, but people say it can be insightful"
+            },
+            {
+              "name": "Zeedijk 1",
+              "description": "If you want to see how the city looked like in the 16th century. The city used to be build with wooded houses. This is the only house that survived from that time"
+            }
+          ]
+        },
+        {
+          "name": "OBA Oosterdok library",
+          "description": "The public library. It is free to enter and has a cafee on the top floor with a great view of the city"
+        },
+        {
+          "name": "Damrak",
+          "description": "One of the central streets in Amsterdam, connecting Centraal Station to Dam Square. It is too busy as for me, but you can see some iconic places there",
+          "places_to_see": [
+            {
+              "name": "Beurs van Berlage",
+              "description": "A historic building that was once the stock exchange of Amsterdam. Dutch invented the stock exchange and Public Companies. Now it is a venue for concerts and events"
+            },
+            {
+              "name": "Beurspassage",
+              "description": "A shopping arcade. A beautiful place"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Herengracht, Keizersgracht, Prinsengracht",
+      "description": "If I want to walk in center of Amsterdam, that's where I go",
+      "places_to_see": [
+        {
+          "name": "Westerkerk"
+        },
+        {
+          "name": "Anne Frank House",
+          "description": "It is a very popular place, so I recommend to book tickets in advance"
+        },
+        {
+          "name": "Grachtenmuseum",
+          "description": "Museum of canals, i still didn't visit it but heard it is very interesting"
+        },
+        {
+          "name": "FOAM",
+          "description": "Photography museum, love it, and you can also see how Amsterdam gardens look like"
+        },
+        {
+          "name": "Tuschinski Theater",
+          "description": "A historic cinema that is known for its Art Deco architecture. It is a beautiful place to watch a movies and it has amazing interiors. I think they have tours"
+        },
+        {
+          "name": "Spiegelgracht",
+          "description": "One of the most iconic view on Rijksmuseum"
+        },
+        {
+          "name": "Magere Brug (Skinny bridge)",
+          "description": "The iconic bridge in Amsterdam, it is an old drawbridge that opens to allow boats to pass through. It offers a nice view of the Amstel river"
+        }
+      ]
+    },
+    {
+      "name": "Museumkwartier, Willemspark, Vondelpark",
+      "description": "The area with the most famous museums in Amsterdam, and a just a beautiful area to walk around",
+      "places": [
+        {
+          "name": "Rijksmuseum",
+          "description": "The most famous museum in Amsterdam, with a large collection of Dutch art and history. It is a must-visit for anyone interested in art and culture"
+        },
+        {
+          "name": "Van Gogh Museum",
+          "description": "A museum dedicated to the works of Vincent van Gogh, one of the most famous Dutch painters"
+        },
+        {
+          "name": "Stedelijk Museum",
+          "description": "A museum of modern and contemporary art, with a large collection of works by Dutch and international artists"
+        },
+        {
+          "name": "Vondelpark",
+          "description": "The largest park in Amsterdam, it is a great place to relax and enjoy nature. It is also home to several outdoor cafes and restaurants"
+        }
+      ]
+    },
+    {
+      "name": "De Pijp",
+      "description": "A neighborhood known for its diverse culture, trendy cafes, and the famous Albert Cuyp Market",
+      "places": [
+        {
+          "name": "Albert Cuyp Market",
+          "description": "A market street. Good place to buy souvenirs and try local food. Here you can have a fresh stroopwafel, a haring sandwich, poffertjes and other :) "
+        }
+      ]
+    },
+    {
+      "name": "Jordan",
+      "description": "Cute neighborhood area very, it used to be the place were workers used to live, but now as usual it is a popular area for expats and hight income specialists. Very cute and small area, with a lot of restaurants and bars, and a lot of shops. It is very cute place to walk around"
+    },
+    {
+      "name": "Nord",
+      "description": "The area that is across the river IJ, it is a bit more industrial and less touristic, but it has a lot of interesting places to see. You can take a free ferry from Centraal Station to get there",
+      "places": [
+        {
+          "name": "NDSM wharf",
+          "description": "A former shipyard that has been transformed into a cultural hotspot, with street art, music venues, and festivals"
+        },
+        {
+          "name": "A'DAM Lookout",
+          "description": "An observation deck with panoramic views of the city, it also has a swing that goes over the edge of the building"
+        },
+        {
+          "name": "Eye Filmmuseum",
+          "description": "A museum dedicated to film and cinema, with a large collection of films and exhibitions"
+        }
+      ]
+    }
+  ]
+}

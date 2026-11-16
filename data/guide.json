@@ -1,0 +1,395 @@
+{
+  "title": "My Amsterdam",
+  "subtitle": "A personal guide to neighbourhoods, sights and food",
+  "city": "Amsterdam",
+  "map": { "center": [52.372, 4.893], "zoom": 13 },
+
+  "types": {
+    "neighbourhood": { "label": "Neighbourhood", "color": "#4C6EF5" },
+    "landmark":      { "label": "Landmark",      "color": "#E8590C" },
+    "museum":        { "label": "Museum",        "color": "#7B3FE4" },
+    "food":          { "label": "Food & drink",  "color": "#D9A400" },
+    "attraction":    { "label": "Attraction",    "color": "#1C7ED6" },
+    "street":        { "label": "Street & square", "color": "#E64980" },
+    "park":          { "label": "Park",          "color": "#2B9348" },
+    "market":        { "label": "Market",        "color": "#0B9DA8" },
+    "culture":       { "label": "Culture & venue", "color": "#9C6644" }
+  },
+
+  "districts": [
+    {
+      "id": "inside-the-singel",
+      "name": "Inside the Single canal",
+      "description": "The busiest place in the city and super touristic, could be too crowded and annoying, I personally do not like to walk around but if you are first time there are must see places",
+      "area": "inside-the-singel",
+      "color": "#F76707",
+      "tags": ["touristy", "history", "must-see"],
+      "places": [
+        {
+          "id": "centraal-station",
+          "name": "Centraal Station",
+          "description": "The main train station in Amsterdam, and a major transportation hub for the city, it might be overwhelming but it worth spend a few minutes there",
+          "type": "landmark",
+          "tags": ["architecture", "history"],
+          "location": [52.378901, 4.900581],
+          "places": [
+            {
+              "id": "station-building",
+              "name": "The station building",
+              "description": "The station building is a beautiful example of 19th-century architecture itest",
+              "type": "landmark",
+              "tags": ["architecture", "history"]
+            },
+            {
+              "id": "starbucks-old-waiting-room",
+              "name": "Starbucks in old waiting room",
+              "description": "Hidden gem of station, they preserved the design of the original waiting room. Unfortunately 1st class Grand Cafe is closed :(",
+              "type": "food",
+              "tags": ["hidden gem", "coffee"],
+              "location": [52.37841, 4.900658],
+              "mapsQuery": "Starbucks, Stationsplein 17C, Amsterdam"
+            },
+            {
+              "id": "ij-entrance",
+              "name": "IJ entrance",
+              "description": "The entrance to the station from the IJ river, with a great view of the city and the river. You can also take a ferry from here to other parts of the city, including the popular NDSM wharf area",
+              "type": "landmark",
+              "tags": ["views", "ferry"],
+              "location": [52.38015, 4.90005],
+              "mapsQuery": "Amsterdam Centraal IJzijde"
+            }
+          ]
+        },
+        {
+          "id": "dam-square",
+          "name": "Dam Square",
+          "description": "The heart of Amsterdam. This is the place where the city started",
+          "type": "street",
+          "tags": ["must-see", "history"],
+          "area": "dam-square",
+          "places": [
+            {
+              "id": "royal-palace",
+              "name": "Royal Palace",
+              "description": "The official residence of the Dutch monarch",
+              "type": "landmark",
+              "tags": ["history", "architecture", "must-see"],
+              "location": [52.373145, 4.891336]
+            },
+            {
+              "id": "national-monument",
+              "name": "National Monument",
+              "description": "A World War II memorial",
+              "type": "landmark",
+              "tags": ["WWII", "free"],
+              "location": [52.37283, 4.89353]
+            },
+            {
+              "id": "nieuwe-kerk",
+              "name": "New Church",
+              "description": "(Not that new :) it is founded in the 15th century) A historic church that hosts exhibitions and concerts",
+              "type": "landmark",
+              "tags": ["church", "history", "art"],
+              "location": [52.373923, 4.891692]
+            }
+          ]
+        },
+        {
+          "id": "rokin",
+          "name": "Rokin",
+          "description": "A street in the city center, with a lot of shops and restaurants also a nice metro station when you can see layers of amsterdam history when you go down to the metro station",
+          "type": "street",
+          "tags": ["shopping", "history"],
+          "area": "rokin",
+          "places": [
+            {
+              "id": "seafood-bar",
+              "name": "The Seafood Bar",
+              "description": "A restaurant that specializes in seafood dishes. If you like seafood, this is a great place to try some local dishes",
+              "type": "food",
+              "tags": ["seafood", "local food"],
+              "location": [52.368725, 4.890586],
+              "mapsQuery": "The Seafood Bar, Spui 15, Amsterdam"
+            },
+            {
+              "id": "fulu-mandarijn",
+              "name": "Fulu Mandarijn",
+              "description": "My favorite Chineese restaurant in Amsterdam. Not very touristic, and the food is really good. But I recommend to ask staff for recommendations, it can be too spicy sometimes",
+              "type": "food",
+              "tags": ["my favourite", "chinese"],
+              "location": [52.371688, 4.892619]
+            },
+            {
+              "id": "van-stapele",
+              "name": "Van Stapele Koekmakerij",
+              "description": "A bakery that specializes in chocolate cookies. They are iconic in Amsterdam, one of the touristic things that I love myself. It is a must-try for anyone with a sweet tooth",
+              "type": "food",
+              "tags": ["sweet tooth", "my favourite"],
+              "location": [52.371979, 4.893365]
+            },
+            {
+              "id": "broodje-popov",
+              "name": "Broodje Popov",
+              "description": "They make the best Philly Cheesesteak in Amsterdam",
+              "type": "food",
+              "tags": ["sandwiches"],
+              "location": [52.369095, 4.891386],
+              "mapsQuery": "Broodje Popov, Spui 8, Amsterdam"
+            },
+            {
+              "id": "blin-queen",
+              "name": "Blin queen",
+              "description": "A place opened fellow Belarusians, not very Dutch but they make the best Blini in Amsterdam :) ",
+              "type": "food",
+              "tags": ["my favourite"],
+              "location": [52.366956, 4.896856]
+            }
+          ]
+        },
+        {
+          "id": "begijnhof",
+          "name": "Begijnhof",
+          "description": "The quiet, historic enclosed courtyard in the heart of Amsterdam with historic houses and churches",
+          "type": "landmark",
+          "tags": ["quiet", "hidden gem", "history", "free"],
+          "area": "begijnhof"
+        },
+        {
+          "id": "de-wallen",
+          "name": "De Wallen with red light district",
+          "description": "The most famous area in Amsterdam, known for its legalized prostitution and nightlife... Most people know Amsterdam by its streets, but trust me it is not real Amsterdam experience :)",
+          "type": "attraction",
+          "tags": ["touristy", "nightlife"],
+          "area": "de-wallen",
+          "places": [
+            {
+              "id": "oude-kerk",
+              "name": "Oude Kerk",
+              "description": "The oldest building in Amsterdam, dating back to the 13th century",
+              "type": "landmark",
+              "tags": ["church", "history"],
+              "location": [52.374362, 4.898073]
+            },
+            {
+              "id": "red-light-secrets",
+              "name": "Red Light Secrets Museum",
+              "description": "A museum that offers a glimpse into the world of sex work in Amsterdam. I didn't visit it tbh, but people say it can be insightful",
+              "type": "museum",
+              "tags": ["not visited yet"],
+              "location": [52.373646, 4.898975]
+            },
+            {
+              "id": "zeedijk-1",
+              "name": "Zeedijk 1",
+              "description": "If you want to see how the city looked like in the 16th century. The city used to be build with wooded houses. This is the only house that survived from that time",
+              "type": "landmark",
+              "tags": ["history", "architecture", "hidden gem"],
+              "location": [52.376312, 4.900146]
+            }
+          ]
+        },
+        {
+          "id": "oba-oosterdok",
+          "name": "OBA Oosterdok library",
+          "description": "The public library. It is free to enter and has a cafee on the top floor with a great view of the city",
+          "type": "culture",
+          "tags": ["free", "views", "coffee"],
+          "location": [52.376246, 4.908198]
+        },
+        {
+          "id": "damrak",
+          "name": "Damrak",
+          "description": "One of the central streets in Amsterdam, connecting Centraal Station to Dam Square. It is too busy as for me, but you can see some iconic places there",
+          "type": "street",
+          "tags": ["touristy"],
+          "area": "damrak",
+          "places": [
+            {
+              "id": "beurs-van-berlage",
+              "name": "Beurs van Berlage",
+              "description": "A historic building that was once the stock exchange of Amsterdam. Dutch invented the stock exchange and Public Companies. Now it is a venue for concerts and events",
+              "type": "landmark",
+              "tags": ["architecture", "history"],
+              "location": [52.375022, 4.896265]
+            },
+            {
+              "id": "beurspassage",
+              "name": "Beurspassage",
+              "description": "A shopping arcade. A beautiful place",
+              "type": "landmark",
+              "tags": ["art", "free", "hidden gem"],
+              "location": [52.37475, 4.89448]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "canal-ring",
+      "name": "Herengracht, Keizersgracht, Prinsengracht",
+      "description": "If I want to walk in center of Amsterdam, that's where I go",
+      "area": "canal-ring",
+      "color": "#1C7ED6",
+      "tags": ["walks", "my favourite"],
+      "places": [
+        {
+          "id": "westerkerk",
+          "name": "Westerkerk",
+          "type": "landmark",
+          "tags": ["church"],
+          "location": [52.374547, 4.883986]
+        },
+        {
+          "id": "anne-frank-house",
+          "name": "Anne Frank House",
+          "description": "It is a very popular place, so I recommend to book tickets in advance",
+          "type": "museum",
+          "tags": ["book ahead", "WWII", "must-see"],
+          "location": [52.375156, 4.884081]
+        },
+        {
+          "id": "grachtenmuseum",
+          "name": "Grachtenmuseum",
+          "description": "Museum of canals, i still didn't visit it but heard it is very interesting",
+          "type": "museum",
+          "tags": ["not visited yet", "history"],
+          "location": [52.367892, 4.88622]
+        },
+        {
+          "id": "foam",
+          "name": "FOAM",
+          "description": "Photography museum, love it, and you can also see how Amsterdam gardens look like",
+          "type": "museum",
+          "tags": ["my favourite", "art"],
+          "location": [52.363988, 4.893263]
+        },
+        {
+          "id": "tuschinski",
+          "name": "Tuschinski Theater",
+          "description": "A historic cinema that is known for its Art Deco architecture. It is a beautiful place to watch a movies and it has amazing interiors. I think they have tours",
+          "type": "culture",
+          "tags": ["architecture", "film"],
+          "location": [52.366506, 4.894707]
+        },
+        {
+          "id": "spiegelgracht",
+          "name": "Spiegelgracht",
+          "description": "One of the most iconic view on Rijksmuseum",
+          "type": "street",
+          "tags": ["views"],
+          "area": "spiegelgracht"
+        },
+        {
+          "id": "magere-brug",
+          "name": "Magere Brug (Skinny bridge)",
+          "description": "The iconic bridge in Amsterdam, it is an old drawbridge that opens to allow boats to pass through. It offers a nice view of the Amstel river",
+          "type": "landmark",
+          "tags": ["views", "architecture"],
+          "location": [52.363584, 4.902375]
+        }
+      ]
+    },
+    {
+      "id": "museum-quarter",
+      "name": "Museumkwartier, Willemspark, Vondelpark",
+      "description": "The area with the most famous museums in Amsterdam, and a just a beautiful area to walk around",
+      "area": "museum-quarter",
+      "color": "#AE3EC9",
+      "tags": ["art", "walks"],
+      "places": [
+        {
+          "id": "rijksmuseum",
+          "name": "Rijksmuseum",
+          "description": "The most famous museum in Amsterdam, with a large collection of Dutch art and history. It is a must-visit for anyone interested in art and culture",
+          "type": "museum",
+          "tags": ["must-see", "art", "history"],
+          "location": [52.359843, 4.88504]
+        },
+        {
+          "id": "van-gogh-museum",
+          "name": "Van Gogh Museum",
+          "description": "A museum dedicated to the works of Vincent van Gogh, one of the most famous Dutch painters",
+          "type": "museum",
+          "tags": ["art"],
+          "location": [52.358367, 4.88109]
+        },
+        {
+          "id": "stedelijk",
+          "name": "Stedelijk Museum",
+          "description": "A museum of modern and contemporary art, with a large collection of works by Dutch and international artists",
+          "type": "museum",
+          "tags": ["art"],
+          "location": [52.3579, 4.87986]
+        },
+        {
+          "id": "vondelpark",
+          "name": "Vondelpark",
+          "description": "The largest park in Amsterdam, it is a great place to relax and enjoy nature. It is also home to several outdoor cafes and restaurants",
+          "type": "park",
+          "tags": ["free", "walks", "coffee"],
+          "area": "vondelpark"
+        }
+      ]
+    },
+    {
+      "id": "de-pijp",
+      "name": "De Pijp",
+      "description": "A neighborhood known for its diverse culture, trendy cafes, and the famous Albert Cuyp Market",
+      "area": "de-pijp",
+      "color": "#E64980",
+      "tags": ["local food", "coffee"],
+      "places": [
+        {
+          "id": "albert-cuyp-market",
+          "name": "Albert Cuyp Market",
+          "description": "A market street. Good place to buy souvenirs and try local food. Here you can have a fresh stroopwafel, a haring sandwich, poffertjes and other :) ",
+          "type": "market",
+          "tags": ["local food", "sweet tooth", "shopping"],
+          "area": "albert-cuyp-market"
+        }
+      ]
+    },
+    {
+      "id": "jordaan",
+      "name": "Jordan",
+      "description": "Cute neighborhood area very, it used to be the place were workers used to live, but now as usual it is a popular area for expats and hight income specialists. Very cute and small area, with a lot of restaurants and bars, and a lot of shops. It is very cute place to walk around",
+      "area": "jordaan",
+      "color": "#2F9E44",
+      "tags": ["walks", "shopping", "coffee"]
+    },
+    {
+      "id": "noord",
+      "name": "Nord",
+      "description": "The area that is across the river IJ, it is a bit more industrial and less touristic, but it has a lot of interesting places to see. You can take a free ferry from Centraal Station to get there",
+      "area": "noord",
+      "color": "#0C8599",
+      "tags": ["ferry", "art", "views"],
+      "places": [
+        {
+          "id": "ndsm-wharf",
+          "name": "NDSM wharf",
+          "description": "A former shipyard that has been transformed into a cultural hotspot, with street art, music venues, and festivals",
+          "type": "attraction",
+          "tags": ["art", "ferry"],
+          "area": "ndsm-wharf"
+        },
+        {
+          "id": "adam-lookout",
+          "name": "A'DAM Lookout",
+          "description": "An observation deck with panoramic views of the city, it also has a swing that goes over the edge of the building",
+          "type": "attraction",
+          "tags": ["views"],
+          "location": [52.383772, 4.902138]
+        },
+        {
+          "id": "eye-filmmuseum",
+          "name": "Eye Filmmuseum",
+          "description": "A museum dedicated to film and cinema, with a large collection of films and exhibitions",
+          "type": "museum",
+          "tags": ["film", "architecture"],
+          "location": [52.384335, 4.900812]
+        }
+      ]
+    }
+  ]
+}
