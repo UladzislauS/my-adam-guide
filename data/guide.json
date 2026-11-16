@@ -335,7 +335,7 @@
           "name": "Tozi",
           "description": "Italian restaurant. We love it a lot",
           "type": "food",
-          "tags": ["dinner", "pasta"],
+          "tags": ["dinner", "pasta", "my favourite"],
           "location": [52.354266, 4.866481]
         },
         {
