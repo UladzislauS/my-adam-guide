@@ -64,6 +64,9 @@
   let guide, areas; // working copy
   let selected = null;
   let mode = null; // location mode shown for the selected place: none | pin | shape
+  // The map only moves a pin after "Move" is pressed, so a stray click can't shift a place.
+  // A place without a pin yet takes the first tap straight away.
+  let picking = false;
   let dirty = false;
   let report = { errors: [], warnings: [], per: new Map() };
   const fresh = new WeakSet(); // newly added places whose link id follows their name
@@ -472,7 +475,7 @@
       }
       if (!touchOnly) layer.bindTooltip(esc(n.name || "Untitled"), { className: "name-tip", sticky: k !== "pin" });
       layer.on("click", (ev) => {
-        if (selected && mode === "pin") return; // let the click through to the map: it moves the pin
+        if (pinPicking()) return; // let the click through to the map: it moves the pin
         L.DomEvent.stopPropagation(ev);
         select(n, { fly: false });
       });
@@ -484,7 +487,7 @@
     const k = geoKind(n);
     const a = accent();
     if (k === "pin") {
-      const m = L.marker(n.location, { icon: pinIcon(), draggable: true, autoPan: true, zIndexOffset: 1000, keyboard: false });
+      const m = L.marker(n.location, { icon: pinIcon(), draggable: pinPicking(), autoPan: true, zIndexOffset: 1000, keyboard: false });
       m.on("dragend", () => { const ll = m.getLatLng(); placePin([ll.lat, ll.lng], false); });
       m.addTo(selLayer);
     } else if (k !== "none") {
@@ -526,8 +529,17 @@
   }
 
   map.on("click", (e) => {
-    if (selected && mode === "pin") placePin([e.latlng.lat, e.latlng.lng], false);
+    if (pinPicking()) placePin([e.latlng.lat, e.latlng.lng], false);
   });
+  function pinPicking() {
+    return !!selected && mode === "pin" && (picking || !hasPin(selected));
+  }
+  function setPicking(on) {
+    picking = on;
+    renderLoc();
+    drawMap();
+  }
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && picking) setPicking(false); });
 
   /* ---------- Tree ---------- */
   let rowNodes = [];
@@ -601,6 +613,7 @@
     if (selected && selected !== n) dropIfEmpty(selected);
     selected = n || null;
     mode = n ? geoMode(n) : null;
+    picking = false;
     preview(null);
     if (n) {
       setView("edit", push);
@@ -622,7 +635,7 @@
 
   function renderForm() {
     const n = selected;
-    mapPane.classList.toggle("pin-mode", !!n && mode === "pin");
+    mapPane.classList.toggle("pin-mode", pinPicking());
     if (!n) {
       mapHint.hidden = true;
       formEl.innerHTML = `<div class="empty-state">Choose a place in the list or on the map,<br />or add one with <b>+</b> next to a district.</div>`;
@@ -763,8 +776,10 @@
 
     formEl.querySelectorAll("[data-mode]").forEach((b) => b.addEventListener("click", () => {
       mode = b.dataset.mode;
+      picking = false;
       preview(null);
       renderLoc();
+      drawMap();
     }));
 
     $("#a-child").addEventListener("click", () => addPlace(n));
@@ -798,9 +813,10 @@
     const body = $("#loc-body");
     if (!body) return;
     formEl.querySelectorAll("[data-mode]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.mode === mode)));
-    mapPane.classList.toggle("pin-mode", mode === "pin");
-    mapHint.hidden = mode !== "pin";
-    mapHint.textContent = hasPin(n) ? "Tap the map or drag the pin to move it" : "Tap the map to place the pin";
+    const pick = pinPicking();
+    mapPane.classList.toggle("pin-mode", pick);
+    mapHint.hidden = !pick;
+    mapHint.textContent = hasPin(n) ? "Tap the map or drag the pin to move it, then press Done" : "Tap the map to place the pin";
     const k = geoKind(n);
     const zoomBtn = `<button type="button" class="btn small ghost" data-zoom>Show</button>`;
 
@@ -813,9 +829,13 @@
     } else if (mode === "pin") {
       body.innerHTML = `
         ${k === "pin"
-          ? `<div class="loc-now">📍 <code>${n.location[0].toFixed(5)}, ${n.location[1].toFixed(5)}</code>${zoomBtn}</div>`
+          ? `<div class="loc-now">📍 <code>${n.location[0].toFixed(5)}, ${n.location[1].toFixed(5)}</code>${zoomBtn}${picking
+              ? `<button type="button" class="btn small primary" id="pin-move" aria-pressed="true">Done</button>`
+              : `<button type="button" class="btn small" id="pin-move" aria-pressed="false">Move</button>`}</div>`
           : n.area ? `<div class="loc-now">Now shown as an area. Placing a pin replaces it.</div>` : ""}
-        <p class="hint">Tap the map to put the pin there, or search:</p>
+        <p class="hint">${k !== "pin" ? "Tap the map to put the pin there, or search:"
+          : picking ? "Tap the map or drag the pin to move it, or search:"
+          : "Press <b>Move</b> to change it on the map, or search:"}</p>
         <div class="geo">
           <input id="geo-q" type="search" placeholder="Address, Google Maps link or coordinates" autocomplete="off" enterkeyhint="search" />
           <button type="button" class="btn" id="geo-go">Find</button>
@@ -858,6 +878,7 @@
 
   function bindLoc(n) {
     $("#loc-body [data-zoom]")?.addEventListener("click", () => flyTo(n));
+    $("#pin-move")?.addEventListener("click", () => setPicking(!picking));
     $("#loc-clear")?.addEventListener("click", () => {
       delete n.location;
       delete n.area;

@@ -196,6 +196,7 @@ a { color: var(--accent); }
 .loc-now { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--chip); font-size: 13px; }
 .loc-now code { font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; }
 .loc-now .btn { margin-left: auto; }
+.loc-now .btn + .btn { margin-left: 0; }
 .hint { margin: 0; font-size: 12px; color: var(--ink-3); }
 .geo { display: flex; gap: 6px; }
 .geo input { flex: 1; min-width: 0; }
